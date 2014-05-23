@@ -20,9 +20,10 @@
 {{#each resources.facebook.data}}
     
     <div class="box">
-	    <a href="/albums/{{this.id}}" ><img src="{{this.previewImage}}"></a>
+	    <a href="/albums/{{this.id}}" ></a>
+	    <img src="{{this.previewImage}}">
 	    <div class="title">
-	    	<a href="/albums/{{this.id}}" >{{this.name}} </a>
+	    	{{this.name}}
 	    </div>
 	    <div class="date">{{this.humanTime}}</div>     
     </div>
