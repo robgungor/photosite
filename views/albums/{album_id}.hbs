@@ -1,0 +1,36 @@
+{{!
+{
+	"title": "America's Cup",
+	"name": "photosite",
+	"resources": {
+	    "facebook": {
+	        "url": "http://proxy.storyteller.io/facebook/{album_id}/photos",
+	        "headers": {
+	            "Api-Key": "0276bf3f-b0e7-417a-8871-c79d57511e6a",
+	            "Project": "photosite"
+	        }
+	    }
+	},
+	"preprocessor": "album.js"
+}
+}}
+
+<div class="wrap">
+
+{{#each resources.facebook.data}}
+    <div class="box">
+      <div class="boxInner">
+        
+        <a href="/albums/{{../parameters.album_id}}/photos/{{this.id}}" style="background-image: url({{this.previewImage}});"></a>
+
+        <div class="titleBox">
+        	<div class="title">{{this.name}} </div>        	
+        	<div class="date">{{this.humanTime}}</div>
+        </div>
+        
+      </div>
+    </div>
+
+{{/each}}
+
+</div>

@@ -2,3 +2,5 @@
    Use requirejs (http://requirejs.org/) to include more JS files.
    You don't need to include requirejs yourself!
    The Grunt scripts will automatically merge all these files into /compiled/scripts.js */
+   //var markup = solidus.templates['album/index']( data );
+
