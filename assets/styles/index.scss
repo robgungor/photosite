@@ -125,9 +125,7 @@
       max-width: 900px;
     }
 
-    a.back{
-      margin-bottom: 30px;
-      display: block;
+    a.back{            
       font-size: .7em;
       letter-spacing: .1em;
       text-decoration: none;
@@ -136,13 +134,19 @@
     main, footer{
       clear: both;
     }
-    footer small{
-      font-size: .5em;
-      letter-spacing: .1em;
+    header, footer{
+      margin: 10px;
     }
     footer{
       margin-bottom: 20px;
     }
+    footer small{
+      font-size: .5em;
+      letter-spacing: .1em;
+      display: block;
+      margin-top: 1em;
+    }
+    
     body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleBox {
        margin-bottom: 0;
     }
