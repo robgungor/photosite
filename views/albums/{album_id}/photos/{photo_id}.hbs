@@ -15,15 +15,31 @@
 }
 }}
 
-<div class="wrap">
-	<div class="single-image">
-	{{#with resources.currentPhoto}}
-	  		
-	  		<div class="photo-full"><img src="{{this.previewImage}}"></div>
-	  		<h2>{{this.name}}</h2>
-	  		<h3>{{this.humanTime}}</h3>
-	  		<h5><a href="../">BACK</a></h5>
+<!-- {album_id}/photos/{photo_id}.hbs -->
+<section class="wrap">
 
-	  {{/with}}
-	</div>
-</div>
+	<header>
+		<h1>America's Cup Photo Gallery</h1>
+		<a class="back" href="../">BACK</a>
+	</header>
+
+	<main >
+	
+		<article class="single-image">	  		
+	  		<h2>{{resources.currentPhoto.name}}</h2>	  			
+	  		
+	  		<div class="photo-full">
+	  			<img src="{{resources.currentPhoto.previewImage}}">
+	  		</div>
+	  		
+	  		<h3><time datetime="{{resources.currentPhoto.created_time}}">{{resources.currentPhoto.humanTime}}</time></h3>
+	  	<article>
+	</main>
+
+	<footer>
+		<a class="back" href="../">BACK</a>
+		<small>BUILT BY ROB GUNGOR</small>
+	</footer>
+	
+</section>
+	

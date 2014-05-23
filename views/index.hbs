@@ -15,21 +15,31 @@
 }
 }}
 
-<div class="wrap home">
+<section class="wrap home">
 
-{{#each resources.facebook.data}}
-    
-    <div class="box">
-	    <a href="/albums/{{this.id}}" ></a>
-	    <img src="{{this.previewImage}}">
-	    <div class="title">
-	    	{{this.name}}
-	    </div>
-	    <div class="date">{{this.humanTime}}</div>     
-    </div>
+	<header>
+		<h1>America's Cup Photo Gallery</h1>
+	</header>
 
+	<main >
+	<!-- loop -->
+	{{#each resources.facebook.data}}
+	    <article class="box">
+		    <a href="/albums/{{this.id}}" ></a>
+		    <figure>
+		    	<img src="{{this.previewImage}}">
+		    	<figcaption>
+		    		<span class="title">{{this.name}}</span>
+		    		<time datetime="{{this.created_time}}">{{this.humanTime}}</time>
+		    	</figcaption>
+		    </figure>
+	    </article>
+	{{/each}}
+	<!-- end loop -->
+	</main>
 
-
-{{/each}}
-
-</div>
+	<footer>
+		<small>BUILT BY ROB GUNGOR</small>
+	</footer>
+	
+<section>
