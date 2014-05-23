@@ -123,6 +123,12 @@
       max-width: 900px;
     }
 
+    a.back{
+      margin-bottom: 30px;
+      display: block;
+      margin-left: 20px;
+    }
+
     body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleBox {
        margin-bottom: 0;
     }
